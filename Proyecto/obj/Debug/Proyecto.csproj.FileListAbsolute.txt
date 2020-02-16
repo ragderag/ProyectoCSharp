@@ -1,0 +1,9 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\obj\Debug\Proyecto.Form1.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Proyecto\obj\Debug\Proyecto.pdb
