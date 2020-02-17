@@ -24,3 +24,18 @@ C:\Users\Edgar\OneDrive - Coordinación de Seguridad de la Información\CERT\2.4
 C:\Users\Edgar\OneDrive - Coordinación de Seguridad de la Información\CERT\2.4 Programación orientada a objetos\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Gatos.resources
 C:\Users\Edgar\OneDrive - Coordinación de Seguridad de la Información\CERT\2.4 Programación orientada a objetos\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Perros.resources
 C:\Users\Edgar\OneDrive - Coordinación de Seguridad de la Información\CERT\2.4 Programación orientada a objetos\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Roedores.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\bin\Debug\proyecto.exe.config
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\bin\Debug\proyecto.exe
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\bin\Debug\proyecto.pdb
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.csprojAssemblyReference.cache
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Aves.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Form1.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Gatos.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Peces.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Perros.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Properties.Resources.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Reptilescs.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Roedores.resources
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.csproj.GenerateResource.cache
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.exe
+C:\Users\LUISAYALA\Desktop\proyecto\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.pdb
