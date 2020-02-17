@@ -21,5 +21,11 @@ namespace proyecto
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Owner.Show();
+        }
     }
 }

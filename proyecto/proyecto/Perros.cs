@@ -16,5 +16,16 @@ namespace proyecto
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Owner.Show();
+        }
+
+        private void Perros_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
