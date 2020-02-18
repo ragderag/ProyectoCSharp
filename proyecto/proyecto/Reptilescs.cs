@@ -68,8 +68,8 @@ namespace proyecto
             {
                 //MessageBox.Show(comboBox1.SelectedItem.ToString());
                 comboBox2.Items.Clear();
-                comboBox2.Items.Add(c1.nombre);
-                comboBox2.Items.Add(c2.nombre);
+                comboBox2.Items.Add(c1.Nombre);
+                comboBox2.Items.Add(c2.Nombre);
 
                 /*
                 comboBox2.Items.Add("Comida de camaleon Reptile Mixed 100ml 250gr");
@@ -158,17 +158,17 @@ namespace proyecto
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedItem.ToString() == c1.nombre)
+            if (comboBox2.SelectedItem.ToString() == c1.Nombre)
             {
                 pictureBox1.Image = null;
                 pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-                pictureBox1.Image = Image.FromFile(c1.imagen);
+                pictureBox1.Image = Image.FromFile(c1.Imagen);
             }
-            else if (comboBox2.SelectedItem.ToString() == c2.nombre)
+            else if (comboBox2.SelectedItem.ToString() == c2.Nombre)
             {
                 pictureBox1.Image = null;
                 pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-                pictureBox1.Image = Image.FromFile(c2.imagen);
+                pictureBox1.Image = Image.FromFile(c2.Imagen);
             }
         }
 
@@ -179,11 +179,11 @@ namespace proyecto
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedItem.ToString() == c1.nombre)
+            if (comboBox2.SelectedItem.ToString() == c1.Nombre)
             {
                 MessageBox.Show(c1.ToString());
             }
-            else if (comboBox2.SelectedItem.ToString() == c2.nombre)
+            else if (comboBox2.SelectedItem.ToString() == c2.Nombre)
             {
                 MessageBox.Show(c2.ToString());
             }
