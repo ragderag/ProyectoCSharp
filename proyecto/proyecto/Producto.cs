@@ -8,38 +8,22 @@ namespace proyecto
 {
     class Producto
     {
-        double precio;
-        string imagen;
-        string nombre;
-        string descripcion;
-        int cantidad_p;
+        decimal Precio;
+        string Imagen;
+        string Nombre;
+        string Descripcion;
 
-        public double Precio{ get { return precio; } set { precio = value; } }
-        public string Imagen { get { return imagen; } set { imagen = value; } }
-        public string Nombre { get { return nombre; } set { nombre = value; } }
-        public string Descripcion { get { return descripcion; } set { descripcion = value; } }
-        public int CantidadProducto { get { return cantidad_p; } set { cantidad_p = value; } }
-        //Falta agragar la cantidad de productos al método constructor
-        public Producto(string nombre,double precio, string imagen,string descripcion) 
+        public decimal precio{ get { return Precio; } set { Precio = value; } }
+        public string imagen { get { return Imagen; } set { Imagen = value; } }
+        public string nombre { get { return Nombre; } set { Nombre = value; } }
+        public string descripcion { get { return Descripcion; } set { Descripcion = value; } }
+
+        public Producto(string nombre,decimal precio, string imagen,string descripcion) 
         {
             Nombre = nombre;
             Precio = precio;
             Imagen = imagen;
             Descripcion = descripcion;
-        }
-        public Producto() { }
-
-        public void AgregarLista()
-        {
-
-        }
-        public void QuitarLista()
-        {
-
-        }
-        public void Comprar()
-        {
-
         }
         public override string ToString()
         {

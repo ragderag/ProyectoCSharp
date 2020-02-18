@@ -46,15 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
+    <Compile Include="Animales.cs" />
     <Compile Include="Aves.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aves.Designer.cs">
       <DependentUpon>Aves.cs</DependentUpon>
     </Compile>
-    <Compile Include="Casa.cs" />
-    <Compile Include="Comida.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
