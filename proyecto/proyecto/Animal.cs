@@ -9,21 +9,21 @@ namespace proyecto
     class Animal : Producto
     {
         string raza;
-        double peso;
-        double altura;
+        double peso_a;
+        double altura_a;
         string color;
 
         public string Raza { get { return raza; } set { raza = value; } }
-        public double Peso { get { return peso; } set { peso = value; } }
-        public double Altura { get { return altura; } set { altura = value; } }
+        public double PesoAnimal { get { return peso_a; } set { peso_a = value; } }
+        public double AlturaAnimal { get { return altura_a; } set { altura_a = value; } }
         public string Color { get { return color; } set { color = value; } }
 
         public Animal() { }
         public Animal(string raza,double peso,double altura,string color, string nombre, double precio, string imagen, string descripcion):base(nombre,precio,imagen,descripcion)
         {
             Raza = raza;
-            Peso = peso;
-            Altura = altura;
+            PesoAnimal = peso;
+            AlturaAnimal = altura;
             Color = color;
             Nombre = nombre;
             Precio = precio;
@@ -33,7 +33,7 @@ namespace proyecto
         }
         public override string ToString()
         {
-            return Descripcion + " Precio:  $" + Precio + " pesos" + "Raza: " + Raza + " Peso: " + Peso + "Kg" + "Altura: " + Altura + "metros" + " Color:" + Color;
+            return Descripcion + " Precio:  $" + Precio + " pesos" + "Raza: " + Raza + " Peso: " + PesoAnimal + "Kg" + "Altura: " + AlturaAnimal + "metros" + " Color:" + Color;
         }
     }
 }

@@ -12,12 +12,14 @@ namespace proyecto
         string imagen;
         string nombre;
         string descripcion;
+        int cantidad_p;
 
         public double Precio{ get { return precio; } set { precio = value; } }
         public string Imagen { get { return imagen; } set { imagen = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
-
+        public int CantidadProducto { get { return cantidad_p; } set { cantidad_p = value; } }
+        //Falta agragar la cantidad de productos al método constructor
         public Producto(string nombre,double precio, string imagen,string descripcion) 
         {
             Nombre = nombre;
