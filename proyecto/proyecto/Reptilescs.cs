@@ -16,23 +16,13 @@ namespace proyecto
         Producto[] comida=new Producto[16];
         Producto[] Comple = new Producto[6];
         Producto[] higiene = new Producto[7];
-        /*________TEST*/
-        List<string[]> lista = Csv.LeeCSV();
-        /*TEST________*/
+        Producto[] iluminacion = new Producto[6];
+        Producto[] decoracion = new Producto[7];
+        Producto[] cale = new Producto[4];
+
         public Reptilescs()
         {
             InitializeComponent();
-            /*_______TEST*/
-            IEnumerable<string> query =
-                (from array in lista
-                 where array.Contains("reptil")
-                 select array[2]).Distinct();
-
-            foreach (var item in query)
-            {
-                comboBox1.Items.Add(item);
-            }
-            /*TEST_______*/
             comboBox1.Items.Add("Reptiles");
             comboBox1.Items.Add("Comida");
             comboBox1.Items.Add("Complementos Alimenticios");
@@ -88,6 +78,54 @@ namespace proyecto
             }
             catch (SystemException e) { MessageBox.Show(e.ToString()); }
 
+            string file3 = "basedatos\\iluminacion.txt";
+            try
+            {
+                int i = 0;
+                FileStream stream = new FileStream(file3, FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(stream);
+                while (reader.Peek() > -1)
+                {
+                    string cad = reader.ReadLine();
+                    iluminacion[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
+                    i++;
+                }
+                reader.Close();
+            }
+            catch (SystemException e) { MessageBox.Show(e.ToString()); }
+
+            string file4 = "basedatos\\Decoracion.txt";
+            try
+            {
+                int i = 0;
+                FileStream stream = new FileStream(file4, FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(stream);
+                while (reader.Peek() > -1)
+                {
+                    string cad = reader.ReadLine();
+                    decoracion[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
+                    i++;
+                }
+                reader.Close();
+            }
+            catch (SystemException e) { MessageBox.Show(e.ToString()); }
+
+            string file5 = "basedatos\\Cale.txt";
+            try
+            {
+                int i = 0;
+                FileStream stream = new FileStream(file5, FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(stream);
+                while (reader.Peek() > -1)
+                {
+                    string cad = reader.ReadLine();
+                    cale[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
+                    i++;
+                }
+                reader.Close();
+            }
+            catch (SystemException e) { MessageBox.Show(e.ToString()); }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,20 +151,7 @@ namespace proyecto
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*TEST_____*/
-            IEnumerable<string> query =
-                (from array in lista
-                 where array.Contains(comboBox1.SelectedItem.ToString())
-                 select array[3]).Distinct();
-            comboBox2.Items.Clear();
-            comboBox2.ResetText();
-            foreach (var item in query)
-            {
-                comboBox2.Items.Add(item);
-            }
-
-            /*_____TEST*/
-            /*if (comboBox1.SelectedItem.ToString() == "Reptiles")
+            if (comboBox1.SelectedItem.ToString() == "Reptiles")
             {
                 comboBox2.Items.Clear();
                 comboBox2.Items.Add("Camaleones");
@@ -166,35 +191,29 @@ namespace proyecto
             else if (comboBox1.SelectedItem.ToString() == "Iluminacion")
             {
                 comboBox2.Items.Clear();
-                comboBox2.Items.Add("Lampara Bombilla uv Aquazonic 36W");
-                comboBox2.Items.Add("Exo Terra sun glo 50w");
-                comboBox2.Items.Add("Fluorescente Uvb150");
-                comboBox2.Items.Add("Rep Mini Light strip led");
-                comboBox2.Items.Add("Rep Brigth Control Pro 70w");
-                comboBox2.Items.Add("Reflector Lampara Compact para Reptil");
+                foreach (var i in iluminacion)
+                {
+                    comboBox2.Items.Add(i.nombre);
+                }
             }
             else if (comboBox1.SelectedItem.ToString() == "Decoracion")
             {
                 comboBox2.Items.Clear();
-                comboBox2.Items.Add("Planta seda Colgante Terrarios abutilon");
-                comboBox2.Items.Add("Planta plastica hiedra del congo");
-                comboBox2.Items.Add("Planta pandanus");
-                comboBox2.Items.Add("Rama Ramificada 30cm");
-                comboBox2.Items.Add("Arbol Flexible para Terrarios jungle tree");
-                comboBox2.Items.Add("Exo Terra Cueva chica");
-                comboBox2.Items.Add("Exo Terra Cueva grande");
-
+                foreach (var i in decoracion)
+                {
+                    comboBox2.Items.Add(i.nombre);
+                }
 
             }
             else if (comboBox1.SelectedItem.ToString() == "Calefaccion")
             {
                 comboBox2.Items.Clear();
-                comboBox2.Items.Add("Roca Calefactora Repticare Standard 1,68kg");
-                comboBox2.Items.Add("Termostato 100W 401gr");
-                comboBox2.Items.Add("Lampara de Rayos UVA Neo 75W");
-                comboBox2.Items.Add("Bombilla de Calentamiento");
+                foreach (var i in cale)
+                {
+                    comboBox2.Items.Add(i.nombre);
+                }
 
-            }*/
+            }
 
         }
 
@@ -242,15 +261,39 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Iluminacion")
             {
-                
+                foreach (var i in iluminacion)
+                {
+                    if (comboBox2.SelectedItem.ToString() == i.nombre)
+                    {
+                        pictureBox1.Image = null;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+                        pictureBox1.Image = Image.FromFile(i.imagen);
+                    }
+                }
             }
             else if (comboBox1.SelectedItem.ToString() == "Decoracion")
             {
-                
+                foreach (var i in decoracion)
+                {
+                    if (comboBox2.SelectedItem.ToString() == i.nombre)
+                    {
+                        pictureBox1.Image = null;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+                        pictureBox1.Image = Image.FromFile(i.imagen);
+                    }
+                }
             }
             else if (comboBox1.SelectedItem.ToString() == "Calefaccion")
             {
-                
+                foreach (var i in cale)
+                {
+                    if (comboBox2.SelectedItem.ToString() == i.nombre)
+                    {
+                        pictureBox1.Image = null;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+                        pictureBox1.Image = Image.FromFile(i.imagen);
+                    }
+                }
             }
             
             
@@ -299,23 +342,36 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Iluminacion")
             {
-
+                foreach (var i in iluminacion)
+                {
+                    if (comboBox2.SelectedItem.ToString() == i.nombre)
+                    {
+                        MessageBox.Show(i.ToString());
+                    }
+                }
             }
             else if (comboBox1.SelectedItem.ToString() == "Decoracion")
             {
-
+                foreach (var i in decoracion)
+                {
+                    if (comboBox2.SelectedItem.ToString() == i.nombre)
+                    {
+                        MessageBox.Show(i.ToString());
+                    }
+                }
             }
             else if (comboBox1.SelectedItem.ToString() == "Calefaccion")
             {
-
+                foreach (var i in cale)
+                {
+                    if (comboBox2.SelectedItem.ToString() == i.nombre)
+                    {
+                        MessageBox.Show(i.ToString());
+                    }
+                }
             }
             
             
-        }
-
-        private void Reptilescs_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

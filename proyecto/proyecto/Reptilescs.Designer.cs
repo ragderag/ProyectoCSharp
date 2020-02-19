@@ -38,18 +38,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Cantidad = new System.Windows.Forms.Label();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1453, 38);
+            this.button1.Location = new System.Drawing.Point(1434, 38);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 23);
+            this.button1.Size = new System.Drawing.Size(190, 44);
             this.button1.TabIndex = 0;
             this.button1.Text = "Menú Principal";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,9 +111,9 @@
             // button2
             // 
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(226, 536);
+            this.button2.Location = new System.Drawing.Point(348, 515);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 23);
+            this.button2.Size = new System.Drawing.Size(159, 65);
             this.button2.TabIndex = 6;
             this.button2.Text = "Informacion";
             this.button2.UseVisualStyleBackColor = true;
@@ -120,11 +121,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(413, 536);
+            this.button3.Location = new System.Drawing.Point(587, 515);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(145, 65);
             this.button3.TabIndex = 7;
-            this.button3.Text = "Aceptar";
+            this.button3.Text = "Agregar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -139,13 +140,12 @@
             this.Cantidad.TabIndex = 8;
             this.Cantidad.Text = "Cantidad";
             // 
-            // domainUpDown1
+            // numericUpDown1
             // 
-            this.domainUpDown1.Location = new System.Drawing.Point(348, 424);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(157, 22);
-            this.domainUpDown1.TabIndex = 9;
-            this.domainUpDown1.Text = "domainUpDown1";
+            this.numericUpDown1.Location = new System.Drawing.Point(348, 424);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown1.TabIndex = 10;
             // 
             // Reptilescs
             // 
@@ -153,7 +153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1685, 838);
-            this.Controls.Add(this.domainUpDown1);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.Cantidad);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -168,8 +168,8 @@
             this.Name = "Reptilescs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reptiles";
-            this.Load += new System.EventHandler(this.Reptilescs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +186,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label Cantidad;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

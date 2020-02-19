@@ -18,22 +18,20 @@ namespace proyecto
         public double AlturaAnimal { get { return altura_a; } set { altura_a = value; } }
         public string Color { get { return color; } set { color = value; } }
 
-        public Animal() { }
-        public Animal(string raza,double peso,double altura,string color, string nombre, double precio, string imagen, string descripcion):base(nombre,precio,imagen,descripcion)
+        
+        public Animal(string raza,double peso,double altura,string color, string nombre, decimal precio, string imagen, string descripcion):base(nombre,precio,imagen,descripcion)
         {
             Raza = raza;
             PesoAnimal = peso;
             AlturaAnimal = altura;
             Color = color;
-            Nombre = nombre;
-            Precio = precio;
-            Imagen = imagen;
-            Descripcion = descripcion;
 
         }
+        /*
         public override string ToString()
         {
             return Descripcion + " Precio:  $" + Precio + " pesos" + "Raza: " + Raza + " Peso: " + PesoAnimal + "Kg" + "Altura: " + AlturaAnimal + "metros" + " Color:" + Color;
         }
+        */
     }
 }

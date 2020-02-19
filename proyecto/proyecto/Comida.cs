@@ -15,16 +15,13 @@ namespace proyecto
         public double CantidadComida { get { return cantidad_c; } set { cantidad_c = value; } }
         public string Tipo { get { return tipo; } set { tipo = value; } }
 
-        public Comida() { }
-        public Comida(string marca,double cantidad_c, string tipo, string nombre, double precio, string imagen, string descripcion) : base(nombre,precio,imagen,descripcion)
+        
+        public Comida(string marca,double cantidad_c, string tipo, string nombre, decimal precio, string imagen, string descripcion) : base(nombre,precio,imagen,descripcion)
         {
             Marca = marca;
             CantidadComida = cantidad_c;
             Tipo = tipo;
-            Nombre = nombre;
-            Precio = precio;
-            Imagen = imagen;
-            Descripcion = descripcion;
+            
         }
 
 
