@@ -53,6 +53,7 @@
     <Compile Include="Aves.Designer.cs">
       <DependentUpon>Aves.cs</DependentUpon>
     </Compile>
+    <Compile Include="Csv.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

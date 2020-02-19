@@ -16,9 +16,23 @@ namespace proyecto
         Producto[] comida=new Producto[16];
         Producto[] Comple = new Producto[6];
         Producto[] higiene = new Producto[7];
+        /*________TEST*/
+        List<string[]> lista = Csv.LeeCSV();
+        /*TEST________*/
         public Reptilescs()
         {
             InitializeComponent();
+            /*_______TEST*/
+            IEnumerable<string> query =
+                (from array in lista
+                 where array.Contains("reptil")
+                 select array[2]).Distinct();
+
+            foreach (var item in query)
+            {
+                comboBox1.Items.Add(item);
+            }
+            /*TEST_______*/
             comboBox1.Items.Add("Reptiles");
             comboBox1.Items.Add("Comida");
             comboBox1.Items.Add("Complementos Alimenticios");
@@ -99,7 +113,20 @@ namespace proyecto
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString() == "Reptiles")
+            /*TEST_____*/
+            IEnumerable<string> query =
+                (from array in lista
+                 where array.Contains(comboBox1.SelectedItem.ToString())
+                 select array[3]).Distinct();
+            comboBox2.Items.Clear();
+            comboBox2.ResetText();
+            foreach (var item in query)
+            {
+                comboBox2.Items.Add(item);
+            }
+
+            /*_____TEST*/
+            /*if (comboBox1.SelectedItem.ToString() == "Reptiles")
             {
                 comboBox2.Items.Clear();
                 comboBox2.Items.Add("Camaleones");
@@ -167,7 +194,7 @@ namespace proyecto
                 comboBox2.Items.Add("Lampara de Rayos UVA Neo 75W");
                 comboBox2.Items.Add("Bombilla de Calentamiento");
 
-            }
+            }*/
 
         }
 
@@ -284,6 +311,11 @@ namespace proyecto
             }
             
             
+        }
+
+        private void Reptilescs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
