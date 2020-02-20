@@ -9,9 +9,9 @@ namespace proyecto
 {
     class Csv
     {
-        public static List<string[]> LeeCSV()
+        public static List<string[]> LeeCSV(string ruta)
         {
-            var reader = new StreamReader(@"..\..\proyecto\..\petShop.csv");
+            var reader = new StreamReader(ruta);
             List<string[]> lista = new List<string[]>();
             var line = reader.ReadLine();
             string[] coma = new string[] { "," };

@@ -13,15 +13,16 @@ namespace proyecto
 {
     public partial class Reptilescs : Form
     {
-        Producto[] comida=new Producto[16];
-        Producto[] Comple = new Producto[6];
-        Producto[] higiene = new Producto[7];
-        Producto[] iluminacion = new Producto[6];
-        Producto[] decoracion = new Producto[7];
-        Producto[] cale = new Producto[4];
-
+        List<string[]> lista = Csv.LeeCSV(@"basedatos\petShop.csv");
+        List<Producto> Comida = new List<Producto>();
+        List<Producto> Complementos = new List<Producto>();
+        List<Producto> Higiene = new List<Producto>();
+        List<Producto> Iluminacion = new List<Producto>();
+        List<Producto> Decoracion = new List<Producto>();
+        List<Producto> Cale = new List<Producto>();
         public Reptilescs()
         {
+            
             InitializeComponent();
             comboBox1.Items.Add("Reptiles");
             comboBox1.Items.Add("Comida");
@@ -30,102 +31,41 @@ namespace proyecto
             comboBox1.Items.Add("Iluminacion");
             comboBox1.Items.Add("Decoracion");
             comboBox1.Items.Add("Calefaccion");
-            string file = "basedatos\\comida.txt";
-            try
-            {
-                int i = 0;
-                FileStream stream = new FileStream(file, FileMode.Open, FileAccess.Read);
-                StreamReader reader = new StreamReader(stream);
-                while (reader.Peek() > -1) 
-                {
-                    string cad=reader.ReadLine();
-                    comida[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
-                    i++;
-                } 
-                reader.Close();
-            }
-            catch (SystemException e) { MessageBox.Show(e.ToString()); }
 
-            string file1 = "basedatos\\Complementos.txt";
-            try
+            foreach (var i in lista)
             {
-                int i = 0;
-                FileStream stream = new FileStream(file1, FileMode.Open, FileAccess.Read);
-                StreamReader reader = new StreamReader(stream);
-                while (reader.Peek() > -1)
+                if (i[0] == "comida")
                 {
-                    string cad = reader.ReadLine();
-                    Comple[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
-                    i++;
+                    Producto aux = new Producto(i[1], Convert.ToDecimal(i[2]), i[3], i[5]);
+                    Comida.Add(aux);
                 }
-                reader.Close();
-            }
-            catch (SystemException e) { MessageBox.Show(e.ToString()); }
-
-            string file2 = "basedatos\\higiene.txt";
-            try
-            {
-                int i = 0;
-                FileStream stream = new FileStream(file2, FileMode.Open, FileAccess.Read);
-                StreamReader reader = new StreamReader(stream);
-                while (reader.Peek() > -1)
+                else if (i[0] == "Complementos") 
                 {
-                    string cad = reader.ReadLine();
-                    higiene[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
-                    i++;
+                    Producto aux = new Producto(i[1], Convert.ToDecimal(i[2]), i[3], i[5]);
+                    Complementos.Add(aux);
                 }
-                reader.Close();
-            }
-            catch (SystemException e) { MessageBox.Show(e.ToString()); }
-
-            string file3 = "basedatos\\iluminacion.txt";
-            try
-            {
-                int i = 0;
-                FileStream stream = new FileStream(file3, FileMode.Open, FileAccess.Read);
-                StreamReader reader = new StreamReader(stream);
-                while (reader.Peek() > -1)
+                else if (i[0] == "higiene")
                 {
-                    string cad = reader.ReadLine();
-                    iluminacion[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
-                    i++;
+                    Producto aux = new Producto(i[1], Convert.ToDecimal(i[2]), i[3], i[5]);
+                    Higiene.Add(aux);
                 }
-                reader.Close();
-            }
-            catch (SystemException e) { MessageBox.Show(e.ToString()); }
-
-            string file4 = "basedatos\\Decoracion.txt";
-            try
-            {
-                int i = 0;
-                FileStream stream = new FileStream(file4, FileMode.Open, FileAccess.Read);
-                StreamReader reader = new StreamReader(stream);
-                while (reader.Peek() > -1)
+                else if (i[0] == "iluminacion")
                 {
-                    string cad = reader.ReadLine();
-                    decoracion[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
-                    i++;
+                    Producto aux = new Producto(i[1], Convert.ToDecimal(i[2]), i[3], i[5]);
+                    Iluminacion.Add(aux);
                 }
-                reader.Close();
-            }
-            catch (SystemException e) { MessageBox.Show(e.ToString()); }
-
-            string file5 = "basedatos\\Cale.txt";
-            try
-            {
-                int i = 0;
-                FileStream stream = new FileStream(file5, FileMode.Open, FileAccess.Read);
-                StreamReader reader = new StreamReader(stream);
-                while (reader.Peek() > -1)
+                else if (i[0] == "Decoracion")
                 {
-                    string cad = reader.ReadLine();
-                    cale[i] = new Producto(cad.Split('@')[0], Convert.ToDecimal(cad.Split('@')[1]), cad.Split('@')[2], cad.Split('@')[3]);
-                    i++;
+                    Producto aux = new Producto(i[1], Convert.ToDecimal(i[2]), i[3], i[5]);
+                    Decoracion.Add(aux);
                 }
-                reader.Close();
-            }
-            catch (SystemException e) { MessageBox.Show(e.ToString()); }
+                else if (i[0] == "cale")
+                {
+                    Producto aux = new Producto(i[1], Convert.ToDecimal(i[2]), i[3], i[5]);
+                    Cale.Add(aux);
+                }
 
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -165,16 +105,16 @@ namespace proyecto
             else if (comboBox1.SelectedItem.ToString() == "Comida")
             {
                 comboBox2.Items.Clear();
-                foreach (var i in comida) 
+                foreach (var i in Comida)
                 {
                     comboBox2.Items.Add(i.nombre);
                 }
-                
+
             }
             else if (comboBox1.SelectedItem.ToString() == "Complementos Alimenticios")
             {
                 comboBox2.Items.Clear();
-                foreach (var i in Comple)
+                foreach (var i in Complementos)
                 {
                     comboBox2.Items.Add(i.nombre);
                 }
@@ -183,7 +123,7 @@ namespace proyecto
             else if (comboBox1.SelectedItem.ToString() == "Higiene y Limpieza")
             {
                 comboBox2.Items.Clear();
-                foreach (var i in higiene)
+                foreach (var i in Higiene)
                 {
                     comboBox2.Items.Add(i.nombre);
                 }
@@ -191,7 +131,7 @@ namespace proyecto
             else if (comboBox1.SelectedItem.ToString() == "Iluminacion")
             {
                 comboBox2.Items.Clear();
-                foreach (var i in iluminacion)
+                foreach (var i in Iluminacion)
                 {
                     comboBox2.Items.Add(i.nombre);
                 }
@@ -199,20 +139,18 @@ namespace proyecto
             else if (comboBox1.SelectedItem.ToString() == "Decoracion")
             {
                 comboBox2.Items.Clear();
-                foreach (var i in decoracion)
+                foreach (var i in Decoracion)
                 {
                     comboBox2.Items.Add(i.nombre);
                 }
-
             }
             else if (comboBox1.SelectedItem.ToString() == "Calefaccion")
             {
                 comboBox2.Items.Clear();
-                foreach (var i in cale)
+                foreach (var i in Cale)
                 {
                     comboBox2.Items.Add(i.nombre);
                 }
-
             }
 
         }
@@ -221,11 +159,11 @@ namespace proyecto
         {
             if (comboBox1.SelectedItem.ToString() == "Reptiles")
             {
-                
+
             }
             else if (comboBox1.SelectedItem.ToString() == "Comida")
             {
-                foreach (var i in comida)
+                foreach (var i in Comida)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -237,7 +175,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Complementos Alimenticios")
             {
-                foreach (var i in Comple)
+                foreach (var i in Complementos)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -249,7 +187,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Higiene y Limpieza")
             {
-                foreach (var i in higiene)
+                foreach (var i in Higiene)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -261,7 +199,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Iluminacion")
             {
-                foreach (var i in iluminacion)
+                foreach (var i in Iluminacion)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -273,7 +211,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Decoracion")
             {
-                foreach (var i in decoracion)
+                foreach (var i in Decoracion)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -285,7 +223,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Calefaccion")
             {
-                foreach (var i in cale)
+                foreach (var i in Cale)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -295,8 +233,8 @@ namespace proyecto
                     }
                 }
             }
-            
-            
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -312,7 +250,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Comida")
             {
-                foreach (var i in comida)
+                foreach (var i in Comida)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -322,7 +260,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Complementos Alimenticios")
             {
-                foreach (var i in Comple)
+                foreach (var i in Complementos)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -332,7 +270,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Higiene y Limpieza")
             {
-                foreach (var i in higiene)
+                foreach (var i in Higiene)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -342,7 +280,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Iluminacion")
             {
-                foreach (var i in iluminacion)
+                foreach (var i in Iluminacion)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -352,7 +290,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Decoracion")
             {
-                foreach (var i in decoracion)
+                foreach (var i in Decoracion)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -362,7 +300,7 @@ namespace proyecto
             }
             else if (comboBox1.SelectedItem.ToString() == "Calefaccion")
             {
-                foreach (var i in cale)
+                foreach (var i in Cale)
                 {
                     if (comboBox2.SelectedItem.ToString() == i.nombre)
                     {
@@ -370,8 +308,6 @@ namespace proyecto
                     }
                 }
             }
-            
-            
         }
     }
 }
