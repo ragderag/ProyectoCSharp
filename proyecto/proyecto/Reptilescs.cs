@@ -42,9 +42,21 @@ namespace proyecto
                 from array in lista
                 where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
                 select array[4];
-            Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown1.Value);
+            //Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown1.Value);
+            //Compra.AgregarProducto(aux);
 
-            Compra.AgregarProducto(aux);
+            if (comboBox1.Text == "Animal")
+            {
+                Animal aux = new Animal("raza", 20.0, 0.45, "Color", comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], Convert.ToInt32(numericUpDown1.Value));
+                Compra.AgregarProducto(aux);
+            }
+            else
+            {
+                Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown1.Value);
+                Compra.AgregarProducto(aux);
+            }
+
+
             var resultado = Compra.Mostrar();
             foreach (var i in resultado)
                 MessageBox.Show(i.ToString() + "\nCantidad: " + i.Cantidad.ToString());
@@ -152,5 +164,10 @@ namespace proyecto
 
         private void label6_Click(object sender, EventArgs e)
         {        }
+
+        private void Reptilescs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
