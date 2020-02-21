@@ -96,11 +96,11 @@ namespace proyecto
                 select array[5];
             if (comboBox1.Text == "Animal")
             {
-                Animal aux = new Animal("raza",20.0,0.45,"Color",comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0]);
+                Animal aux = new Animal("raza",20.0,0.45,"Color",comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), Convert.ToInt32(numericUpDown1.Value), pictureBox1.ImageLocation, query.ToArray()[0]);
             }
             else
             {
-                Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0]);
+                Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), Convert.ToInt32(numericUpDown1.Value), pictureBox1.ImageLocation, query.ToArray()[0]);
             }
         }
 
