@@ -94,7 +94,14 @@ namespace proyecto
                 from array in lista
                 where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
                 select array[5];
-            Producto aux = new Producto(comboBox2.ToString(), Convert.ToDecimal(label4.Text.Remove(0,1)), pictureBox1.ImageLocation, query.ToArray()[0]);
+            if (comboBox1.Text == "Animal")
+            {
+                Animal aux = new Animal("raza",20.0,0.45,"Color",comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0]);
+            }
+            else
+            {
+                Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0]);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
