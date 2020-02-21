@@ -27,6 +27,14 @@ namespace proyecto
             Color = color;
 
         }
+        public Animal(string raza, double peso, double altura, string color, string nombre, decimal precio, int cantidad, string imagen, string descripcion) : base(nombre, precio, cantidad, imagen, descripcion)
+        {
+            Raza = raza;
+            PesoAnimal = peso;
+            AlturaAnimal = altura;
+            Color = color;
+
+        }
         /*
         public override string ToString()
         {
