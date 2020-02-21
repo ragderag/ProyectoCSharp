@@ -26,6 +26,14 @@ namespace proyecto
             Imagen = imagen;
             Descripcion = descripcion;
         }
+        public Producto(string nombre, decimal precio, int cantidad, string imagen, string descripcion)
+        {
+            Nombre = nombre;
+            Precio = precio;
+            Cantidad = cantidad;
+            Imagen = imagen;
+            Descripcion = descripcion;
+        }
         public override string ToString()
         {
             return Descripcion +" Precio:  $"+ Precio + " pesos";
