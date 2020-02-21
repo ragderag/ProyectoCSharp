@@ -70,7 +70,7 @@ namespace proyecto
                 comboBox2.Items.Clear();
                 foreach (var i in Comida)
                 {
-                    comboBox2.Items.Add(i.nombre);
+                    comboBox2.Items.Add(i.Nombre);
                 }
 
             }
@@ -79,7 +79,7 @@ namespace proyecto
                 comboBox2.Items.Clear();
                 foreach (var i in Snacks)
                 {
-                    comboBox2.Items.Add(i.nombre);
+                    comboBox2.Items.Add(i.Nombre);
                 }
 
             }
@@ -88,7 +88,7 @@ namespace proyecto
                 comboBox2.Items.Clear();
                 foreach (var i in Higiene)
                 {
-                    comboBox2.Items.Add(i.nombre);
+                    comboBox2.Items.Add(i.Nombre);
                 }
             }
             else if (comboBox1.SelectedItem.ToString() == "Jaulas y Pajareras")
@@ -96,7 +96,7 @@ namespace proyecto
                 comboBox2.Items.Clear();
                 foreach (var i in Jaulas)
                 {
-                    comboBox2.Items.Add(i.nombre);
+                    comboBox2.Items.Add(i.Nombre);
                 }
             }
             else if (comboBox1.SelectedItem.ToString() == "Accesorios")
@@ -104,7 +104,7 @@ namespace proyecto
                 comboBox2.Items.Clear();
                 foreach (var i in Accesorios)
                 {
-                    comboBox2.Items.Add(i.nombre);
+                    comboBox2.Items.Add(i.Nombre);
                 }
 
             }
@@ -113,7 +113,7 @@ namespace proyecto
                 comboBox2.Items.Clear();
                 foreach (var i in Comederos)
                 {
-                    comboBox2.Items.Add(i.nombre);
+                    comboBox2.Items.Add(i.Nombre);
                 }
 
             }
