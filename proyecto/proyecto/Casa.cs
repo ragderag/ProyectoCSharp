@@ -19,7 +19,7 @@ namespace proyecto
         public double Ancho { get { return ancho; } set { ancho = value; } }
         public string Material { get { return material; } set { material = value; } }
         
-        public Casa (double altura_c, double peso_c,double largo,double ancho,string material, string nombre, decimal precio, string imagen, string descripcion) : base(nombre,precio,imagen,descripcion)
+        public Casa (double altura_c, double peso_c,double largo,double ancho,string material, string nombre, decimal precio, string imagen, string descripcion,int cantidad) : base(nombre,precio,imagen,descripcion,cantidad)
         {
             AlturaCasa = altura_c;
             PesoCasa = peso_c;

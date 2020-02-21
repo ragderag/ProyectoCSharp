@@ -19,15 +19,7 @@ namespace proyecto
         public string Color { get { return color; } set { color = value; } }
 
         
-        public Animal(string raza,double peso,double altura,string color, string nombre, decimal precio, string imagen, string descripcion):base(nombre,precio,imagen,descripcion)
-        {
-            Raza = raza;
-            PesoAnimal = peso;
-            AlturaAnimal = altura;
-            Color = color;
-
-        }
-        public Animal(string raza, double peso, double altura, string color, string nombre, decimal precio, int cantidad, string imagen, string descripcion) : base(nombre, precio, cantidad, imagen, descripcion)
+        public Animal(string raza,double peso,double altura,string color, string nombre, decimal precio, string imagen, string descripcion,int cantidad):base(nombre,precio,imagen,descripcion,cantidad)
         {
             Raza = raza;
             PesoAnimal = peso;
