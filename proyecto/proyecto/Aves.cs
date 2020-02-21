@@ -124,5 +124,10 @@ namespace proyecto
         {
 
         }
+
+        private void Aves_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace proyecto
             this.Visible = false;
             this.Owner.Show();
         }
+
+        private void Gatos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

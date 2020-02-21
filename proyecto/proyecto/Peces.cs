@@ -27,5 +27,10 @@ namespace proyecto
             this.Visible = false;
             this.Owner.Show();
         }
+
+        private void Peces_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

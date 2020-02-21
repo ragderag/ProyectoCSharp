@@ -27,5 +27,10 @@ namespace proyecto
         {
 
         }
+
+        private void Perros_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

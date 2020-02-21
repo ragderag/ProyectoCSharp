@@ -309,5 +309,10 @@ namespace proyecto
                 }
             }
         }
+
+        private void Reptilescs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

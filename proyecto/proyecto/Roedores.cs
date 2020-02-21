@@ -22,5 +22,10 @@ namespace proyecto
             this.Visible = false;
             this.Owner.Show();
         }
+
+        private void Roedores_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
