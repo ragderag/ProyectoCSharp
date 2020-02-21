@@ -111,6 +111,8 @@ namespace proyecto
         {
             label4.Visible = false;
             label3.Visible = false;
+            label6.Text = "$0";
+            numericUpDown1.Value = 1;
             IEnumerable<string> query =
                 (from array in lista
                  where array.Contains(comboBox1.SelectedItem.ToString())
