@@ -57,12 +57,7 @@
     </Compile>
     <Compile Include="Casa.cs" />
     <Compile Include="Comida.cs" />
-    <Compile Include="Comprar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Comprar.Designer.cs">
-      <DependentUpon>Comprar.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Compra.cs" />
     <Compile Include="Csv.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -91,12 +86,6 @@
     <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuitarLista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuitarLista.Designer.cs">
-      <DependentUpon>QuitarLista.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reptilescs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,17 +98,8 @@
     <Compile Include="Roedores.Designer.cs">
       <DependentUpon>Roedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerLista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VerLista.Designer.cs">
-      <DependentUpon>VerLista.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Aves.resx">
       <DependentUpon>Aves.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Comprar.resx">
-      <DependentUpon>Comprar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -142,17 +122,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuitarLista.resx">
-      <DependentUpon>QuitarLista.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reptilescs.resx">
       <DependentUpon>Reptilescs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Roedores.resx">
       <DependentUpon>Roedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VerLista.resx">
-      <DependentUpon>VerLista.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

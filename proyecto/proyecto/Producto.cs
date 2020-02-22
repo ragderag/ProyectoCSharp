@@ -12,19 +12,20 @@ namespace proyecto
         string imagen;
         string nombre;
         string descripcion;
-        int cantidad;
+        decimal cantidad;
 
         public decimal Precio{ get { return precio; } set { precio = value; } }
         public string Imagen { get { return imagen; } set { imagen = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
-        public int Cantidad { get { return cantidad; } set { cantidad = value; } }
-        public Producto(string nombre,decimal precio, string imagen,string descripcion) 
+        public decimal Cantidad { get { return cantidad; } set { cantidad = value; } }
+        public Producto(string nombre,decimal precio, string imagen,string descripcion,decimal cantidad) 
         {
             Nombre = nombre;
             Precio = precio;
             Imagen = imagen;
             Descripcion = descripcion;
+            Cantidad = cantidad;
         }
         public override string ToString()
         {

@@ -18,13 +18,11 @@ namespace proyecto
         Peces peces = new Peces();
         Gatos gatos = new Gatos();
         Perros perros = new Perros();
-        QuitarLista quitar = new QuitarLista();
-        VerLista ver = new VerLista();
-        Comprar comp = new Comprar();
 
         public Form1()
         {
             InitializeComponent();
+            Compra.limpiar();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,24 +72,7 @@ namespace proyecto
         public Roedores Roedores { get; set; }
         public Gatos Gatos { get; set; }
         public Peces Peces { get; set; }
-        public QuitarLista Quitar { get; set; }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ver.Show(this);
-            Hide();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            quitar.Show(this);
-            Hide();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            comp.Show(this);
-            Hide();
-        }
+     
+        
     }
 }
