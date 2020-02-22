@@ -23,7 +23,12 @@ namespace proyecto
             this.Owner.Show();
         }
 
-        private void Ver_FormClosing(object sender, FormClosingEventArgs e)
+        private void VerLista_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VerLista_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

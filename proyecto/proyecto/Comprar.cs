@@ -17,17 +17,6 @@ namespace proyecto
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-         //   this.Visible = false;
-        //    this.Owner.Show();
-        //}
-
         private void Comprar_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

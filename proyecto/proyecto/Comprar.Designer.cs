@@ -39,58 +39,57 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 30);
+            this.label1.Location = new System.Drawing.Point(286, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 29);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Lista de Productos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(337, 84);
+            this.label2.Location = new System.Drawing.Point(320, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 18);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Sin Productos";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(334, 343);
+            this.label3.Location = new System.Drawing.Point(317, 349);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 36);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Total";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(439, 343);
+            this.label4.Location = new System.Drawing.Point(405, 349);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 36);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 4;
             this.label4.Text = "$0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Brush Script MT", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(309, 394);
+            this.label5.Location = new System.Drawing.Point(286, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(213, 29);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 6;
             this.label5.Text = "¡Gracias por su Compra!";
             // 
             // Comprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
