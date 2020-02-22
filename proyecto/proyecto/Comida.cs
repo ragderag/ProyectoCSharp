@@ -16,7 +16,7 @@ namespace proyecto
         public string Tipo { get { return tipo; } set { tipo = value; } }
 
         
-        public Comida(string marca,double cantidad_c, string tipo, string nombre, decimal precio, string imagen, string descripcion,int cantidad) : base(nombre,precio,imagen,descripcion,cantidad)
+        public Comida(string marca,double cantidad_c, string tipo, string nombre, decimal precio, string imagen, string descripcion) : base(nombre,precio,imagen,descripcion)
         {
             Marca = marca;
             CantidadComida = cantidad_c;
