@@ -46,10 +46,10 @@
             this.Breptiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Breptiles.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.Breptiles.Image = ((System.Drawing.Image)(resources.GetObject("Breptiles.Image")));
-            this.Breptiles.Location = new System.Drawing.Point(271, 186);
-            this.Breptiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Breptiles.Location = new System.Drawing.Point(203, 151);
+            this.Breptiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Breptiles.Name = "Breptiles";
-            this.Breptiles.Size = new System.Drawing.Size(288, 651);
+            this.Breptiles.Size = new System.Drawing.Size(216, 529);
             this.Breptiles.TabIndex = 0;
             this.Breptiles.Text = "Reptiles";
             this.Breptiles.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -63,10 +63,10 @@
             this.button2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(1392, 186);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(1044, 151);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(297, 651);
+            this.button2.Size = new System.Drawing.Size(223, 529);
             this.button2.TabIndex = 1;
             this.button2.Text = "Aves";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -79,10 +79,10 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(-6, 186);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(-4, 151);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(281, 651);
+            this.button3.Size = new System.Drawing.Size(211, 529);
             this.button3.TabIndex = 2;
             this.button3.Text = "Peces";
             this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -95,10 +95,10 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1107, 186);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(830, 151);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(291, 651);
+            this.button4.Size = new System.Drawing.Size(218, 529);
             this.button4.TabIndex = 3;
             this.button4.Text = "Roedores";
             this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -111,10 +111,10 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(822, 186);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(616, 151);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(291, 651);
+            this.button5.Size = new System.Drawing.Size(218, 529);
             this.button5.TabIndex = 4;
             this.button5.Text = "Gatos";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -127,10 +127,10 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(550, 186);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(412, 151);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(281, 651);
+            this.button6.Size = new System.Drawing.Size(211, 529);
             this.button6.TabIndex = 5;
             this.button6.Text = "Perros";
             this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -141,10 +141,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(907, 44);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(680, 36);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 79);
+            this.button1.Size = new System.Drawing.Size(171, 64);
             this.button1.TabIndex = 6;
             this.button1.Text = "Ver Lista";
             this.button1.UseVisualStyleBackColor = false;
@@ -154,10 +153,9 @@
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button7.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1170, 44);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(878, 36);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(228, 79);
+            this.button7.Size = new System.Drawing.Size(171, 64);
             this.button7.TabIndex = 7;
             this.button7.Text = "Quitar Lista";
             this.button7.UseVisualStyleBackColor = false;
@@ -167,10 +165,9 @@
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button8.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(1433, 44);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Location = new System.Drawing.Point(1075, 36);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(228, 79);
+            this.button8.Size = new System.Drawing.Size(171, 64);
             this.button8.TabIndex = 8;
             this.button8.Text = "Comprar";
             this.button8.UseVisualStyleBackColor = false;
@@ -178,10 +175,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1269, 671);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button1);
@@ -192,8 +189,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Breptiles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1701, 875);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1027, 597);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda De Mascotas";
