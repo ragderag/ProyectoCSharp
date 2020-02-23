@@ -128,16 +128,50 @@ namespace proyecto
 
         private void button3_Click(object sender, EventArgs e)
         {
-            IEnumerable<string> query =
-                from array in lista
-                where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
-                select array[4];
-            Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown2.Value);
+            try {
+                IEnumerable<string> query =
+                                from array in lista
+                                where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                                select array[4];
 
-            Compra.AgregarProducto(aux);
-            var resultado = Compra.Mostrar();
-            foreach (var i in resultado)
-                MessageBox.Show(i.ToString() + "\nCantidad: " + i.Cantidad.ToString());
+                if (comboBox1.Text == "Animal")
+                {
+                    IEnumerable<string> query1 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[5];
+                    IEnumerable<string> query2 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[6];
+                    IEnumerable<string> query3 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[7];
+
+                    IEnumerable<string> query4 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[8];
+
+                    Animal aux = new Animal(query1.ToArray()[0], Convert.ToDouble(query2.ToArray()[0]), Convert.ToDouble(query3.ToArray()[0]), query4.ToArray()[0], comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], Convert.ToInt32(numericUpDown2.Value));
+                    Compra.AgregarProducto(aux);
+                    MessageBox.Show("Se agrego a la compra: " + comboBox2.Text + "\nCantidad: " + numericUpDown2.Value);
+                }
+                else
+                {
+                    Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown2.Value);
+                    Compra.AgregarProducto(aux);
+                    MessageBox.Show("Se agrego a la compra: " + comboBox2.Text + "\nCantidad: " + numericUpDown2.Value);
+                }
+                var l = Compra.Mostrar();
+                foreach (var i in l)
+                {
+                    
+                    MessageBox.Show( i.ToString());
+                }
+            }
+            catch (Exception) { }
         }
     }
 }

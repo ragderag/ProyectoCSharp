@@ -76,6 +76,11 @@ namespace proyecto
         public Gatos Gatos { get; set; }
         public Peces Peces { get; set; }
 
+        public VerLista Ver { get; set; }
+        public QuitarLista Quitar { get; set; }
+
+        public Comprar Com { get; set; }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             ver.Show(this);

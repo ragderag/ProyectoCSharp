@@ -41,9 +41,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(302, 27);
+            this.button1.Location = new System.Drawing.Point(403, 33);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 44);
+            this.button1.Size = new System.Drawing.Size(296, 54);
             this.button1.TabIndex = 5;
             this.button1.Text = "Menu Principal";
             this.button1.UseVisualStyleBackColor = true;
@@ -53,9 +54,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 166);
+            this.label1.Location = new System.Drawing.Point(323, 204);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 28);
+            this.label1.Size = new System.Drawing.Size(120, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Producto";
             // 
@@ -63,33 +65,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(570, 166);
+            this.label2.Location = new System.Drawing.Point(760, 204);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 28);
+            this.label2.Size = new System.Drawing.Size(116, 36);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cantidad";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 197);
+            this.comboBox1.Location = new System.Drawing.Point(105, 242);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(394, 21);
+            this.comboBox1.Size = new System.Drawing.Size(524, 24);
             this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(556, 197);
+            this.numericUpDown1.Location = new System.Drawing.Point(741, 242);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(160, 22);
             this.numericUpDown1.TabIndex = 9;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(155, 364);
+            this.button2.Location = new System.Drawing.Point(207, 448);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 44);
+            this.button2.Size = new System.Drawing.Size(296, 54);
             this.button2.TabIndex = 10;
             this.button2.Text = "Quitar Producto";
             this.button2.UseVisualStyleBackColor = true;
@@ -97,19 +104,20 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Bernard MT Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(454, 364);
+            this.button3.Location = new System.Drawing.Point(605, 448);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(222, 44);
+            this.button3.Size = new System.Drawing.Size(296, 54);
             this.button3.TabIndex = 11;
             this.button3.Text = "Bajar Cantidad";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // QuitarLista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.numericUpDown1);
@@ -117,6 +125,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QuitarLista";
             this.Text = "QuitarLista";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuitarLista_FormClosing);

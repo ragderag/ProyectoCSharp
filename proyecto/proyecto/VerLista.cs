@@ -15,6 +15,14 @@ namespace proyecto
         public VerLista()
         {
             InitializeComponent();
+            label3.Text = "Hola";
+            var l = Compra.Mostrar();
+            foreach (var i in l)
+            {
+                label3.Text = label3.Text + "\n" + i.ToString();
+                label3.Size = new Size(label3.PreferredWidth, label3.PreferredHeight);
+                MessageBox.Show(i.ToString());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,12 +33,17 @@ namespace proyecto
 
         private void VerLista_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void VerLista_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -87,3 +87,6 @@ C:\Users\betoa\Desktop\UNAM-CERT\POO\ProyectoCSharp\proyecto\proyecto\obj\Debug\
 C:\Users\betoa\Desktop\UNAM-CERT\POO\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Comprar.resources
 C:\Users\betoa\Desktop\UNAM-CERT\POO\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.QuitarLista.resources
 C:\Users\betoa\Desktop\UNAM-CERT\POO\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.VerLista.resources
+C:\Users\LUISAYALA\Desktop\proyectoC#\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.Comprar.resources
+C:\Users\LUISAYALA\Desktop\proyectoC#\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.QuitarLista.resources
+C:\Users\LUISAYALA\Desktop\proyectoC#\ProyectoCSharp\proyecto\proyecto\obj\Debug\proyecto.VerLista.resources

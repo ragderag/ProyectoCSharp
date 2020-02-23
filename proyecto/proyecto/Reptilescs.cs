@@ -17,13 +17,11 @@ namespace proyecto
         public Reptilescs()
         {
             InitializeComponent();
-
             label4.Visible = false;
             label3.Visible = false;
             IEnumerable<string> query =
                 (from array in lista
                  select array[0]).Distinct();
-
             foreach (var item in query)
             {
                 comboBox1.Items.Add(item);
@@ -38,28 +36,47 @@ namespace proyecto
 
         private void button3_Click(object sender, EventArgs e)
         {
-            IEnumerable<string> query =
-                from array in lista
-                where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
-                select array[4];
-            //Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown1.Value);
-            //Compra.AgregarProducto(aux);
-
-            if (comboBox1.Text == "Animal")
+            try
             {
-                Animal aux = new Animal("raza", 20.0, 0.45, "Color", comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], Convert.ToInt32(numericUpDown1.Value));
-                Compra.AgregarProducto(aux);
-            }
-            else
-            {
-                Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown1.Value);
-                Compra.AgregarProducto(aux);
-            }
+                IEnumerable<string> query =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[4];
 
+                if (comboBox1.Text == "Animal")
+                {
+                    IEnumerable<string> query1 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[5];
+                    IEnumerable<string> query2 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[6];
+                    IEnumerable<string> query3 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[7];
 
-            var resultado = Compra.Mostrar();
-            foreach (var i in resultado)
-                MessageBox.Show(i.ToString() + "\nCantidad: " + i.Cantidad.ToString());
+                    IEnumerable<string> query4 =
+                    from array in lista
+                    where array.Contains(comboBox1.SelectedItem.ToString()) && array.Contains(comboBox2.SelectedItem.ToString())
+                    select array[8];
+
+                    Animal aux = new Animal(query1.ToArray()[0], Convert.ToDouble(query2.ToArray()[0]), Convert.ToDouble(query3.ToArray()[0]), query4.ToArray()[0], comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], Convert.ToInt32(numericUpDown1.Value));
+                    Compra.AgregarProducto(aux);
+                    MessageBox.Show("Se agrego a la compra: " + comboBox2.Text + "\nCantidad: " + numericUpDown1.Value);
+                }
+                else
+                {
+                    Producto aux = new Producto(comboBox2.Text, Convert.ToDecimal(label4.Text.Remove(0, 1)), pictureBox1.ImageLocation, query.ToArray()[0], numericUpDown1.Value);
+                    Compra.AgregarProducto(aux);
+                    MessageBox.Show("Se agrego a la compra: " + comboBox2.Text + "\nCantidad: " + numericUpDown1.Value);
+                }
+                
+            }
+            catch (Exception) { }
+
         }
 
         private void label1_Click(object sender, EventArgs e)

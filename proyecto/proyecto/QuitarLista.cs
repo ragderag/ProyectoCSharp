@@ -15,6 +15,12 @@ namespace proyecto
         public QuitarLista()
         {
             InitializeComponent();
+            var l = Compra.Mostrar();
+            foreach (var i in l)
+            {
+                comboBox1.Items.Add(i.Nombre);
+            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +32,11 @@ namespace proyecto
         private void QuitarLista_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
