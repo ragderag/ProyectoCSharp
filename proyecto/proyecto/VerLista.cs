@@ -15,14 +15,14 @@ namespace proyecto
         public VerLista()
         {
             InitializeComponent();
-            label3.Text = "Hola";
-            var l = Compra.Mostrar();
-            foreach (var i in l)
-            {
-                label3.Text = label3.Text + "\n" + i.ToString();
-                label3.Size = new Size(label3.PreferredWidth, label3.PreferredHeight);
-                MessageBox.Show(i.ToString());
-            }
+            
+        }
+
+        public VerLista(string cadena)
+        {
+            InitializeComponent();
+            label3.Text = cadena;
+            label3.Size = new Size(label3.PreferredWidth, label3.PreferredHeight);
         }
 
         private void button1_Click(object sender, EventArgs e)

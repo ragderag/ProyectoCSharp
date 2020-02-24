@@ -18,9 +18,8 @@ namespace proyecto
         Peces peces = new Peces();
         Gatos gatos = new Gatos();
         Perros perros = new Perros();
-        QuitarLista quitar = new QuitarLista();
-        VerLista ver = new VerLista();
-        Comprar comp = new Comprar();
+        
+        
 
         public Form1()
         {
@@ -76,27 +75,41 @@ namespace proyecto
         public Gatos Gatos { get; set; }
         public Peces Peces { get; set; }
 
-        public VerLista Ver { get; set; }
-        public QuitarLista Quitar { get; set; }
-
-        public Comprar Com { get; set; }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
+            String cadena = "";
+            foreach (var i in Compra.Mostrar())
+            {
+                cadena = cadena + "\n" + i.ToString();
+            }
+            VerLista ver = new VerLista(cadena);
             ver.Show(this);
             Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            string[] cadenas = new string[Compra.Mostrar().Count];
+            for (int i = 0; i < Compra.Mostrar().Count; i++)
+            {
+                cadenas[i] = Compra.Mostrar()[i].Nombre;
+            }
+            QuitarLista quitar = new QuitarLista(cadenas);
             quitar.Show(this);
             Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            string[] cadenas = new string[Compra.Mostrar().Count];
+            for (int i =0; i<Compra.Mostrar().Count;i++)
+            {
+                cadenas[i] = Compra.Mostrar()[i].Nombre;
+            }
+            Comprar comp = new Comprar(cadenas);
             comp.Show(this);
             Hide();
+            Compra.limpiar();
         }
     }
 }

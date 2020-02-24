@@ -29,7 +29,7 @@ namespace proyecto
         }
         public override string ToString()
         {
-            return Descripcion +" Precio:  $"+ Precio + " pesos";
+            return Nombre+" Cantidad: "+cantidad +" Precio:  $"+ Precio + " pesos";
         }
     }
 }

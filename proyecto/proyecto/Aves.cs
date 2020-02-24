@@ -164,12 +164,7 @@ namespace proyecto
                     Compra.AgregarProducto(aux);
                     MessageBox.Show("Se agrego a la compra: " + comboBox2.Text + "\nCantidad: " + numericUpDown2.Value);
                 }
-                var l = Compra.Mostrar();
-                foreach (var i in l)
-                {
-                    
-                    MessageBox.Show( i.ToString());
-                }
+                
             }
             catch (Exception) { }
         }

@@ -30,12 +30,34 @@ namespace proyecto
             }
         }
 
-        public void QuitarProducto(Producto obj)
+        public static void QuitarProducto(Producto obj)
         {
+            Producto aux=null;
+            
+            foreach(var i in Compras)
+            {
+                if(i.Nombre==obj.Nombre)
+                    aux=i;
+            }
+
+            Compras.Remove(aux);
+            
         }
 
-        public void QuitarCantidad(Producto obj, int can)
+        public static void QuitarCantidad(Producto obj, int can)
         {
+            Producto aux = null;
+
+            foreach (var i in Compras)
+            {
+                if (i.Nombre == obj.Nombre) { 
+                    if (i.Cantidad <= can)
+                        aux = i;
+                    i.Cantidad = i.Cantidad - can;
+                }
+            }
+
+            Compras.Remove(aux);
         }
 
         public static void limpiar()
