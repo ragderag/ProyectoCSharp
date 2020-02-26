@@ -21,6 +21,7 @@ namespace proyecto
         public VerLista(string cadena)
         {
             InitializeComponent();
+            
             label3.Text = cadena;
             label3.Size = new Size(label3.PreferredWidth, label3.PreferredHeight);
         }
@@ -42,6 +43,11 @@ namespace proyecto
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -27,11 +27,11 @@ namespace proyecto
             Color = color;
 
         }
-        /*
+        
         public override string ToString()
         {
-            return Descripcion + " Precio:  $" + Precio + " pesos" + "Raza: " + Raza + " Peso: " + PesoAnimal + "Kg" + "Altura: " + AlturaAnimal + "metros" + " Color:" + Color;
+            return Nombre + " Color: " + Color + " Especie: " + Raza + " Cantidad: " + Cantidad + " Precio:  $" + Precio + " pesos" ;
         }
-        */
+        
     }
 }

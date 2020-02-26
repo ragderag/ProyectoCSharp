@@ -25,6 +25,7 @@ namespace proyecto
         {
             InitializeComponent();
             Compra.limpiar();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +83,14 @@ namespace proyecto
             {
                 cadena = cadena + "\n" + i.ToString();
             }
+            foreach (var i in Compra.MostrarAnimales())
+            {
+                cadena = cadena + "\n" + i.ToString();
+            }
+            if (cadena.Length == 0)
+            {
+                cadena = "Sin productos";
+            }
             VerLista ver = new VerLista(cadena);
             ver.Show(this);
             Hide();
@@ -94,7 +103,14 @@ namespace proyecto
             {
                 cadenas[i] = Compra.Mostrar()[i].Nombre;
             }
-            QuitarLista quitar = new QuitarLista(cadenas);
+
+            string[] cadenasAni = new string[Compra.MostrarAnimales().Count];
+            for (int i = 0; i < Compra.MostrarAnimales().Count; i++)
+            {
+                cadenasAni[i] = Compra.MostrarAnimales()[i].Nombre;
+            }
+
+            QuitarLista quitar = new QuitarLista(cadenas,cadenasAni);
             quitar.Show(this);
             Hide();
         }
@@ -102,11 +118,16 @@ namespace proyecto
         private void button8_Click(object sender, EventArgs e)
         {
             string[] cadenas = new string[Compra.Mostrar().Count];
+            string[] cadenasAnimal = new string[Compra.MostrarAnimales().Count];
             for (int i =0; i<Compra.Mostrar().Count;i++)
             {
                 cadenas[i] = Compra.Mostrar()[i].Nombre;
             }
-            Comprar comp = new Comprar(cadenas);
+            for (int i = 0; i < Compra.MostrarAnimales().Count; i++)
+            {
+                cadenasAnimal[i] = Compra.MostrarAnimales()[i].Nombre;
+            }
+            Comprar comp = new Comprar(cadenas,cadenasAnimal);
             comp.Show(this);
             Hide();
             Compra.limpiar();

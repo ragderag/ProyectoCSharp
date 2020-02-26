@@ -17,21 +17,37 @@ namespace proyecto
             InitializeComponent();
         }
 
-        public Comprar(string[] lista)
+        public Comprar(string[] lista,string[] lista1)
         {
             InitializeComponent();
+            if(lista.Length == 0 && lista1.Length == 0)
+            {
+                label6.Text = "Sin productos";
+            }
             decimal aux = 0;
-            foreach(var i in lista)
+            foreach (var i in lista1)
+            {
+                foreach (var j in Compra.MostrarAnimales())
+                {
+                    if (i == j.Nombre)
+                    {
+                        label6.Text = label6.Text + j.ToString() + "\n";
+                        aux = aux + j.Precio * j.Cantidad;
+                    }
+                }
+            }
+            foreach (var i in lista)
             {
                 foreach(var j in Compra.Mostrar())
                 {
                     if (i == j.Nombre)
                     {
                         label6.Text = label6.Text + j.ToString() + "\n";
-                        aux = aux + j.Precio;
+                        aux = aux + j.Precio * j.Cantidad;
                     }
                 }
             }
+            
             label4.Text = aux.ToString();
         }
 
