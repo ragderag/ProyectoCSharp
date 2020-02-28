@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace proyecto
 {
@@ -48,7 +49,25 @@ namespace proyecto
                 }
             }
             
-            label4.Text = aux.ToString();
+            label4.Text = "$"+aux.ToString();
+            string path = Directory.GetCurrentDirectory();
+            path = path.Substring(0, path.Length - 18);
+            path = path + "Historial";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            string path_file = path + "\\" + "reg_compras.txt";
+            if (!File.Exists(path_file))
+            {
+                using (File.Create(path_file)) { }
+            }
+            StreamWriter registros;
+            registros = File.AppendText(path_file);
+            registros.WriteLine("---------------------------------------------------------");
+            registros.WriteLine(label6.Text);
+            registros.WriteLine("Total" + label4.Text);
+            registros.Close();
         }
 
         private void Comprar_FormClosing(object sender, FormClosingEventArgs e)
@@ -66,6 +85,11 @@ namespace proyecto
             Compra.limpiar();
             this.Visible = false;
             this.Owner.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
