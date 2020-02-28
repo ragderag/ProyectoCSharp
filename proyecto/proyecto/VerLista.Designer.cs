@@ -37,9 +37,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(298, 394);
+            this.button1.Location = new System.Drawing.Point(297, 390);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 44);
+            this.button1.Size = new System.Drawing.Size(230, 42);
             this.button1.TabIndex = 4;
             this.button1.Text = "Menu Principal";
             this.button1.UseVisualStyleBackColor = true;
