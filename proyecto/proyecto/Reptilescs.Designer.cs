@@ -155,6 +155,7 @@
             this.Cantidad.Size = new System.Drawing.Size(123, 31);
             this.Cantidad.TabIndex = 8;
             this.Cantidad.Text = "Cantidad";
+            this.Cantidad.Click += new System.EventHandler(this.Cantidad_Click);
             // 
             // numericUpDown1
             // 
@@ -176,6 +177,7 @@
             this.label3.Size = new System.Drawing.Size(91, 31);
             this.label3.TabIndex = 11;
             this.label3.Text = "Precio";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -197,6 +199,7 @@
             this.label5.Size = new System.Drawing.Size(83, 31);
             this.label5.TabIndex = 13;
             this.label5.Text = "Total:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -217,6 +220,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 15;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Reptilescs
             // 
